@@ -1,0 +1,28 @@
+[book]
+authors = ["Ayoub EL Mhamdi"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Projects Rosseta"
+
+[build]
+create-missing = false
+
+[output.html]
+site-url = "/projects/"
+no-section-label = false
+default-theme = "navy"
+preferred-dark-theme = "navy"
+git-repository-url = "https://github.com/ayoubelmhamdi/projects"
+edit-url-template = "https://github.com/ayoubelmhamdi/projects/tree/master/{path}"
+additional-css = ["./theme/tabbed-code-blocks.css"]
+additional-js = ["./theme/tabbed-code-blocks.js"]
+
+[output.katex]
+[preprocessor.katex]
+
+# [output.linkcheck]
+# optional = true
+# warning-policy = "warn"
+# traverse-parent-directories = true
+# follow-web-links = true
