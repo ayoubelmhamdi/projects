@@ -12,15 +12,18 @@ const class_active = "active";
 // NOTE: the order in which we define the names is important, because we
 // iterate over the names in the *insertion order*.
 const tab_names = new Map();
-tab_names.set("language-python", "Python");
-tab_names.set("language-py", "Python");
-tab_names.set("language-R", "R");
 tab_names.set("language-c", "C");
 tab_names.set("language-cpp", "C++");
+tab_names.set("language-matlab", "Matlab");
+tab_names.set("language-python", "Python");
+tab_names.set("language-py", "Python");
+tab_names.set("language-dart", "Dart");
+tab_names.set("language-lua", "Lua");
+tab_names.set("language-Rust", "Rust");
+tab_names.set("language-js", "Js");
 tab_names.set("language-sh", "Bash");
 tab_names.set("language-shell", "Bash");
 tab_names.set("language-bash", "Bash");
-tab_names.set("language-matlab", "Matlab");
 tab_names.set("language-md", "Markdown");
 tab_names.set("language-text", "Text");
 tab_names.set("language-diff", "Diff");
