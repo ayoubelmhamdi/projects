@@ -1,7 +1,11 @@
+# Exercice 1
+permutation de trois nombre a aide d'un variable temporel
 
-- permutation de trois nombre a aide d'un variable temporel
+# Corrigé
 
 <div class="tabbed-blocks">
+
+
 
 ```c
 #include <stdio.h>
@@ -25,18 +29,39 @@ void affichage(int x,int b,int c){
   b=c;
   c=aide;
 
-  printf("les valeur devien a=%d\tb=%d\tc=%d\n",x,b,c);
+  printf("les valeur devient a=%d\tb=%d\tc=%d\n",x,b,c);
 }
-
 ```
+
+```matlab
+```
+
+```py
+```
+
+```dart
+```
+
+```lua
+```
+
+```js
+```
+
+```Rust
+```
+
 
 ```sh
-echo "Hello world"
 ```
-
 </div>
 
-- permutation de trois nombre a aide des calcule mathématique
+
+# Exercice 2
+
+Permutation de trois nombre a aide des calcule mathématique
+
+# Corrigé
 
 <div class="tabbed-blocks">
 
@@ -68,5 +93,27 @@ int main () {
   printf("les valeur devien a=%d\tb=%d\tc=%d\n",a,b,c);
   return 0;
 }
+```
+
+```matlab
+```
+
+```py
+```
+
+```dart
+```
+
+```lua
+```
+
+```js
+```
+
+```Rust
+```
+
+
+```sh
 ```
 </div>
