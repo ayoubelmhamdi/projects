@@ -1,5 +1,5 @@
 # Exercice 1
-permutation de trois nombre a aide d'un variable temporel
+permutation de trois nombres à aide d’un variable temporel
 
 # Corrigé
 
@@ -34,32 +34,34 @@ void affichage(int x,int b,int c){
 ```
 
 ```matlab
+if a>b 
+    x=2
 ```
 
-```py
-```
+<!-- ```py -->
+<!-- ``` -->
+<!---->
+<!-- ```dart -->
+<!-- ``` -->
+<!---->
+<!-- ```lua -->
+<!-- ``` -->
+<!---->
+<!-- ```js -->
+<!-- ``` -->
+<!---->
+<!-- ```Rust -->
+<!-- ``` -->
+<!---->
+<!---->
+<!-- ```sh -->
+<!-- ``` -->
 
-```dart
-```
-
-```lua
-```
-
-```js
-```
-
-```Rust
-```
-
-
-```sh
-```
 </div>
-
 
 # Exercice 2
 
-Permutation de trois nombre a aide des calcule mathématique
+Permutation de trois nombres a aide des calculs mathématique
 
 # Corrigé
 
@@ -98,22 +100,22 @@ int main () {
 ```matlab
 ```
 
-```py
-```
-
-```dart
-```
-
-```lua
-```
-
-```js
-```
-
-```Rust
-```
-
-
-```sh
-```
+<!-- ```py -->
+<!-- ``` -->
+<!---->
+<!-- ```dart -->
+<!-- ``` -->
+<!---->
+<!-- ```lua -->
+<!-- ``` -->
+<!---->
+<!-- ```js -->
+<!-- ``` -->
+<!---->
+<!-- ```Rust -->
+<!-- ``` -->
+<!---->
+<!---->
+<!-- ```sh -->
+<!-- ``` -->
 </div>
