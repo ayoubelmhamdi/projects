@@ -19,7 +19,7 @@ tab_names.set("language-python", "Python");
 tab_names.set("language-py", "Python");
 tab_names.set("language-dart", "Dart");
 tab_names.set("language-lua", "Lua");
-tab_names.set("language-Rust", "Rust");
+tab_names.set("language-rust", "Rust");
 tab_names.set("language-js", "Js");
 tab_names.set("language-sh", "Bash");
 tab_names.set("language-shell", "Bash");
@@ -38,7 +38,7 @@ function addTabsToGroup(group) {
     group.prepend(tab_bar);
 
     // Add a tab for each code block, and hide all but the first block.
-    const pre_elements = group.querySelectorAll("pre");
+    const pre_elements = group.querySelectorAll(":scope > pre");
     pre_elements.forEach((pre_elt, ix) => {
         const tab_elt = addTabForCodeBlock(tab_bar, pre_elements, pre_elt);
         if (ix > 0) {
