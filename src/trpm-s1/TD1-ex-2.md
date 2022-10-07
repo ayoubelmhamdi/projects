@@ -1,55 +1,8 @@
-# EXERCICE
-
-Résolution d’équation de premier ordre
-
-# Corrigé
+# Résolution d’équation de premier ordre
 
 <div class="tabbed-blocks">
 
 ```c
-#include <stdio.h>
-
-int main() {
-  int a, b, c;
-  printf("calcule de equation de premier order\n");
-  printf("Donner les 2 valeurs de a b  \n");
-  scanf("%d%d", &a, &b);
-
-  printf("\nles solution de %dx+%d=0 est :\n\t", a, b);
-
-  if (a == 0 && b == 0) {
-    printf(" S = R\n");
-  } else if (a == 0) {
-    printf("il n'y a pas de solution de l'équation dans R\n");
-  } else if (b == 0) {
-    printf(" S= { 0 }\n");
-  } else {
-    printf(" S= { %.02f }\n",(float)-b/a);
-  }
-
-  return 0;
-}
+{{#include ../c/trpm-s1/TD1-ex-2.c}}
 ```
-
-```matlab
-```
-
-```py
-```
-
-```dart
-```
-
-```lua
-```
-
-```rust
-```
-
-```js
-```
-
-```sh
-```
-
 </div>
