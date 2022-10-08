@@ -10,7 +10,7 @@ create-missing = false
 
 [output.html]
 site-url = "/projects/"
-no-section-label = false
+no-section-label = true
 default-theme = "navy"
 preferred-dark-theme = "navy"
 git-repository-url = "https://github.com/ayoubelmhamdi/projects"
