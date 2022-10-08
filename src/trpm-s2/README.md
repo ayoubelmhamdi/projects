@@ -1,0 +1,30 @@
+# MASTER TRPM S2
+----------------
+
+- Résolution numérique des équations non linéaires
+    - Les méthodes de dichotomie
+        - [La méthode de bissection](./bissection.md)
+        - [La méthode des parties proportionnelles](./parties-proportionnelle.md)
+    - Les méthodes d’approximations successives
+        - [La méthode de la parallèle](./parallele.md)
+        - [La méthode de Newton-Raphson](./newton-raphson,md)
+        - [La méthode de la sécante](./secante,md)
+- Résolution numérique des systèmes d’équations linéaires
+    - Les méthodes directes
+        - [La méthode de Gauss](./gauss.md)
+        - [La méthode de Gauss Max](./mauss-max.md)
+        - [La méthode de Gauss LU](./gauss-lu.md)
+    - Les méthodes itératives
+        - [La méthode Gauss Seidel](./seidel.md)
+- Quadratures
+    - La méthode de Newton-Raphson
+        - [La méthode des trapèzes](./trapeze.md)
+        - [La méthode de Simpson](./simpson.md)
+    - La méthode de Gauss
+        - [La méthode de Romberg ](./romberg.md)
+- Intégration numérique de l’équation différentiel
+    - Les méthodes à pas séparés
+        - [La méthode d’Euler](./euler.md)
+        - [La méthode d’Euler-Cauchy](./euler-cauchy.md)
+        - [La méthode de Runge-Kutta](./runge-kutta.md)
+    - Les méthodes à pas liés
