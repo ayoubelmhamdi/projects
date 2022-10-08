@@ -28,7 +28,7 @@
         - [Les méthodes d’approximations successives](./trpm-s2/README4.md)
             - [La méthode de la parallèle](./trpm-s2/parallele.md)
             - [La méthode de Newton-Raphson](./trpm-s2/newton-raphson.md)
-            - [La méthode de la sécante](./trpm-s2/secante,md)
+            - [La méthode de la sécante](./trpm-s2/secante.md)
     - [Résolution numérique des systèmes d’équations linéaires](./trpm-s2/README5.md)
         - [Les méthodes directes](./trpm-s2/README6.md)
             - [La méthode de Gauss](./trpm-s2/gauss.md)
