@@ -1,4 +1,7 @@
-# Résolution d’équation de deuxième ordre
+# Équation du second degré
+---------------------------
+
+Selon les mêmes principes que le programme précédent, écrire un programme capable de calculer et d’afficher les racines réelles d’une équation du second degré (faire appel au sous-programme racine carré qui retourne la racine carrée d’un nombre).
 
 
 <div class="tabbed-blocks">

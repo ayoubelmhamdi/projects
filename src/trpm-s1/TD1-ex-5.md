@@ -1,4 +1,7 @@
-# Nombre premier
+# Nombres premiers
+------------------
+
+Écrire un programme qui détermine si un nombre entier, préalablement saisi, est un nombre premier.
 
 <div class="tabbed-blocks">
 

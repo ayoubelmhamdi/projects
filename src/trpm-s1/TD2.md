@@ -5,7 +5,7 @@
 -----------
 
 - Écrire un programme qui lit la dimension n d'un tableau tab de type entier (dimension maximale : 50 composantes).
-- remplit le tableau par des valeurs entrées au clavier et affiche le tableau.
+- Remplit le tableau par des valeurs entrées au clavier et affiche le tableau.
 - Effacer ensuite tous les occurrences de la valeur 0 dans le tableau `tab` et tasser les éléments restants.
 - Affiche le tableau resultant.
 
@@ -24,14 +24,14 @@
 1. `exp1` retourne la valeur de \\(x^{n}\\) comme résultat
 2. `exp2` affecte la valeur \\(x^{n}\\) à \\(x\\).
 
-Écrire un programme qui teste les deux fonctions à l'aide des valeurs lues au clavier.
+Écrire un programme qui teste les deux fonctions à l’aide des valeurs lues au clavier.
 
 
 # Exercice 4
 -------------
 
 ### Problème :
-On dispose de deux tableaux `tab1` et `tab2` (de dimensions respectives \\(\mathbf{n}\\) et \\(\mathbf{m}\\) ).
+On a deux tableaux `tab1` et `tab2` (de dimensions respectives \\(\mathbf{n}\\) et \\(\mathbf{m}\\)).
 
 - Fusionner les éléments de `tab1` et `tab2` dans un troisième tableau `tab3`` trié par ordre croissant.
 
@@ -45,7 +45,7 @@ On dispose de deux tableaux `tab1` et `tab2` (de dimensions respectives \\(\math
     - remplacer `tab3[k]` par le plus petit des deux éléments
     - avancer dans le tableau `tab3` et dans le tableau qui a contribué son élément.
 
-Lorsque l'un des deux tableaux `tab1` ou `tab2` est épuisé, il suffit de recopier les éléments restants de l'autre tableau dans le tableau `tab3`.
+Lorsque l’un des deux tableaux `tab1` ou `tab2` est épuisé, il suffit de recopier les éléments restants de l’autre tableau dans le tableau `tab3`.
 
 
 # Exercice 5
@@ -82,7 +82,7 @@ void affiche (int *tab, int nb);
 
 3. Écrire la fonction `ecrire_matrice` à deux paramètres mat et `l`, qui affiche les valeurs de la matrice carrée de dimension `l`.
 
-4. Écrire la fonction `multi_2_matrices` qui effectue la multiplication de deux matrices `mat1` (dimensions `n` ) et `mat2` (dimension `n` ) dans une troisième matrice `mat3` (dimension `n` ):
+4. Écrire la fonction `multi_2_matrices` qui effectue la multiplication de deux matrices `mat1` (dimensions `n`) et `mat2` (dimension `n`) dans une troisième matrice `mat3` (dimension `n`):
 
 5. Écrire un programme qui teste ces fonctions.
 
@@ -107,7 +107,7 @@ void affiche (int *tab, int nb);
 - Le programme devra stocker le résultat dans une nouvelle chaîne de caractères et devra également retourner le nombre de caractères de la chaîne créée.
 
 Exemple : `bonjour` donnera : `boonnnjjjjooooouuuuuurrrrrrr`  
-Avec comme longueur de la chaîne résultat : 28 .
+Avec comme longueur de la chaîne résultat : 28.
 
 
 # Exercice 9
@@ -118,4 +118,4 @@ Avec comme longueur de la chaîne résultat : 28 .
 
 3. Écrire une fonction void `AjouteChaine( char *dest, char *src )` qui ajoute la chaine `src` à la fin de la chaîne `dest`.
 
-4. Écrire une fonction int `CompareChaine( char * ch1, char *ch} 2)` qui retourne 0 si les deux chaînes sont identiques (c.à.d. ont le même contenu), 1 si `ch1` est après `ch2` dans l'ordre lexicographique, -1 si `ch1` est avant `ch2`.
+4. Écrire une fonction int `CompareChaine( char * ch1, char *ch} 2)` qui retourne 0 si les deux chaînes sont identiques (c.-à-d... ont le même contenu), 1 si `ch1` est après `ch2` dans l'ordre lexicographique, -1 si `ch1` est avant `ch2`.
