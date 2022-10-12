@@ -6,7 +6,12 @@ Selon les mêmes principes que le programme précédent, écrire un programme ca
 
 <div class="tabbed-blocks">
 
+
 ```c
 {{#include ../c/trpm-s1/TD1-ex-3.c}}
+```
+
+```matlab
+{{#include ../matlab/trpm-1/TD1-ex-3.m}}
 ```
 </div>

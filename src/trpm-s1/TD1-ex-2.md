@@ -7,7 +7,12 @@ Attention à séparer dans le programme le calcul lui-même et l’affichage du 
 
 <div class="tabbed-blocks">
 
+
 ```c
 {{#include ../c/trpm-s1/TD1-ex-2.c}}
+```
+
+```matlab
+{{#include ../matlab/trpm-1/TD1-ex-2.m}}
 ```
 </div>

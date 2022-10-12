@@ -8,7 +8,12 @@
 
 Écrire un programme qui teste les deux fonctions à l’aide des valeurs lues au clavier.
 
+
 ```c
 {{#include ../c/trpm-s1/TD2-ex-3.c}}
+```
+
+```matlab
+{{#include ../matlab/trpm-1/TD2-ex-3.m}}
 ```
 </div>

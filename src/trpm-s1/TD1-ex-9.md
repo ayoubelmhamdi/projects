@@ -21,8 +21,13 @@ $$\sum_{i=1}^{n} \frac{1}{i^{2}}=\frac{\pi^{2}}{6}$$
 
 <div class="tabbed-blocks">
 
+
 ```c
 {{#include ../c/trpm-s1/TD1-ex-9-a.c}}
+```
+
+```matlab
+{{#include ../matlab/trpm-1/TD1-ex-9-a.m}}
 ```
 </div>
 

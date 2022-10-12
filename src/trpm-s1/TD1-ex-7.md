@@ -32,7 +32,12 @@ Le PGCD est le dernier reste non nul : c’est 12.
 
 <div class="tabbed-blocks">
 
+
 ```c
 {{#include ../c/trpm-s1/TD1-ex-7.c}}
+```
+
+```matlab
+{{#include ../matlab/trpm-1/TD1-ex-7.m}}
 ```
 </div>

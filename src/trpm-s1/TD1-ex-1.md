@@ -10,8 +10,13 @@ On a trois variables entières \\(a, b\\) et \\(c\\).
 
 <div class="tabbed-blocks">
 
+
 ```c
 {{#include ../c/trpm-s1/TD1-ex-1-a.c}}
+```
+
+```matlab
+{{#include ../matlab/trpm-1/TD1-ex-1-a.m}}
 ```
 
 </div>

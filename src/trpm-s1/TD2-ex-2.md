@@ -5,7 +5,12 @@
 
 <div class="tabbed-blocks">
 
+
 ```c
 {{#include ../c/trpm-s1/TD2-ex-2.c}}
+```
+
+```matlab
+{{#include ../matlab/trpm-1/TD2-ex-2.m}}
 ```
 </div>

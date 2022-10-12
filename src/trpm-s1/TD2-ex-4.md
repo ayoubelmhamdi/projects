@@ -20,8 +20,13 @@ Lorsque l’un des deux tableaux `tab1` ou `tab2` est épuisé, il suffit de rec
 
 <div class="tabbed-blocks">
 
+
 ```c
 {{#include ../c/trpm-s1/TD2-ex-4.c}}
+```
+
+```matlab
+{{#include ../matlab/trpm-1/TD2-ex-4.m}}
 ```
 
 </div>

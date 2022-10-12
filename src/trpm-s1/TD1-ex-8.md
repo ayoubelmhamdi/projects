@@ -12,7 +12,12 @@ Partant de \\(y_{0}=1\\), on peut par des itérations successives calculer une v
 
 <div class="tabbed-blocks">
 
+
 ```c
 {{#include ../c/trpm-s1/TD1-ex-8.c}}
+```
+
+```matlab
+{{#include ../matlab/trpm-1/TD1-ex-8.m}}
 ```
 </div>

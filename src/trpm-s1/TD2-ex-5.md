@@ -30,8 +30,13 @@ void affiche (int *tab, int nb);
 
 <div class="tabbed-blocks">
 
+
 ```c
 {{#include ../c/trpm-s1/TD2-ex-5.c}}
+```
+
+```matlab
+{{#include ../matlab/trpm-1/TD2-ex-5.m}}
 ```
 
 </div>

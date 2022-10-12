@@ -9,7 +9,12 @@ Donner un programme de calcul de \\(n!\\) où \\(n\\) est entier, La valeur \\(n
 
 <div class="tabbed-blocks">
 
+
 ```c
 {{#include ../c/trpm-s1/TD1-ex-4.c}}
+```
+
+```matlab
+{{#include ../matlab/trpm-1/TD1-ex-4.m}}
 ```
 </div>

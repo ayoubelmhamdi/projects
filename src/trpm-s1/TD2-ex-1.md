@@ -9,7 +9,17 @@
 
 <div class="tabbed-blocks">
 
+
 ```c
 {{#include ../c/trpm-s1/TD2-ex-1.c}}
 ```
+
+```matlab
+{{#include ../matlab/trpm-1/TD2-ex-1.m}}
+```
+
+```matlab
+{{#include ../matlab/trpm-s1/TD2-ex-1.m}}
+```
+
 </div>
