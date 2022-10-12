@@ -7,6 +7,7 @@ title = "Projects Rosseta"
 
 [build]
 create-missing = false
+build-dir = "book/html"
 
 [output.html]
 site-url = "/projects/"
@@ -18,8 +19,10 @@ edit-url-template = "https://github.com/ayoubelmhamdi/projects/tree/master/{path
 additional-css = ["./theme/tabbed-code-blocks.css"]
 additional-js = ["./theme/tabbed-code-blocks.js"]
 
-[output.katex]
-[preprocessor.katex]
+
+mathjax-support = true
+# [output.katex]
+# [preprocessor.katex]
 
 # [output.linkcheck]
 # optional = true
