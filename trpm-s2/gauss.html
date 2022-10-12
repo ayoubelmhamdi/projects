@@ -160,7 +160,102 @@
                     <main>
                         <h1 id=""><a class="header" href="#"></a></h1>
 <div class="tabbed-blocks">
-<pre><code class="language-c">{{#include ../c/trpm-s2/gauss.c}}
+<pre><code class="language-c">// LA METHODE DE GAUSS
+#include &lt;math.h&gt;
+#include &lt;stdio.h&gt;
+#define NMAX 5
+#define N2MAX 6
+
+int sl_gauss_aff(double a[NMAX][NMAX], double b[NMAX], int n);
+
+int main() {
+  int i, j, n, err;
+  n = 4;
+  printf(&quot;Méthode de Gauss:youssef\n&quot;);
+  double a[NMAX][NMAX] = {
+      {0, 0, 0, 0, 0},      //
+      {0, 8, -4, 3, 7},     //
+      {0, 4, 2, -6, 4},     //
+      {0, -16, 6, -2, -15}, //
+      {0, 6, 10, -15, 10},  //
+  };
+  double b[NMAX] = {12, 1, -19, 1};
+
+  printf(&quot;                        A(1)                                 b(1)\n&quot;);
+  for (i = 1; i &lt;= n; i++) {
+    for (j = 1; j &lt;= n; j++)
+      printf(&quot;%12.5e  &quot;, a[i][j]);
+    printf(&quot;I  %12.5e  \n&quot;, b[i]);
+  }
+  err = sl_gauss_aff(a, b, n);
+  if (err == 1) {
+    printf(&quot;Solution:\n&quot;);
+    for (i = 1; i &lt;= n; i++)
+      printf(&quot;x%d =%23.15e  \n&quot;, i, b[i]);
+  } else
+    printf(&quot;Erreur, matrice singulière\n&quot;);
+  return 0;
+}
+
+int sl_gauss_aff(double a[NMAX][NMAX], double b[NMAX], int n) {
+  int i, j, k, l, err;
+  double pivot, coef, s;
+  double t[NMAX][N2MAX];
+  for (i = 1; i &lt;= n; i++) {
+    for (j = 1; j &lt;= n; j++)
+      t[i][j] = a[i][j];
+    t[i][n + 1] = b[i];
+  }
+  err = 1;
+  k = 1;
+  while (err == 1 &amp;&amp; k &lt; n) {
+    pivot = fabs(t[k][k]);
+    l = k;
+    while (pivot == 0 &amp;&amp; l &lt; n) {
+      l++;
+      pivot = fabs(t[l][k]);
+    }
+    if (pivot != 0) {
+      if (l != k)
+        for (j = k; j &lt;= n + 1; j++) {
+          pivot = t[k][j];
+          t[k][j] = t[l][j];
+          t[l][j] = pivot;
+        }
+      pivot = t[k][k];
+      for (i = k + 1; i &lt;= n; i++) {
+        coef = t[i][k] / pivot;
+        for (j = 1; j &lt;= n + 1; j++)
+          t[i][j] -= coef * t[k][j];
+      }
+      printf(&quot;                  A(%d)       b(%d)\n&quot;, k + 1, k + 1);
+      for (i = 1; i &lt;= n; i++) {
+        for (j = 1; j &lt;= n; j++)
+          printf(&quot;%12.5e  &quot;, t[i][j]);
+        printf(&quot;I  %12.5e  \n&quot;, t[i][n + 1]);
+      }
+    }
+
+    else
+      err = 0;
+    k++;
+  }
+
+  if (t[n][n] == 0)
+    err = 0;
+
+  if (err == 1) {
+    b[n] = t[n][n + 1] / t[n][n];
+    for (i = n - 1; i &gt;= 1; i--) {
+      s = t[i][n + 1];
+      for (j = i + 1; j &lt;= n; j++)
+        s -= t[i][j] * b[j];
+      b[i] = s / t[i][i];
+    }
+  }
+
+  return (err);
+}
 </code></pre>
 </div>
 
