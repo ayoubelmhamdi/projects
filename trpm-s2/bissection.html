@@ -185,6 +185,31 @@ int main() {
   return 0;
 }
 </code></pre>
+<pre><code class="language-matlab">#include &lt;math.h&gt;
+#include &lt;stdio.h&gt;
+
+double f(double x) { 
+   return cos(x) - x;  
+  // return x/4-1; 
+}
+
+int main() {
+  double eps = 0.000000001l;
+  double c, delta, a = 0, b = 10;
+  do {
+    c = (b + a) / 2.0;
+    /* c = (a * f(b) - b * f(a)) / (f(a) - f(b)); */  
+    if (f(a) * f(c) &gt; 0)
+      a = c;
+    else
+      b = c;
+  } while (fabs(b - a) &gt; eps);
+
+  printf(&quot;solution est %lf\n&quot;, c);
+
+  return 0;
+}
+</code></pre>
 </div>
 
                     </main>
