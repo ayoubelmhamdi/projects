@@ -4,7 +4,7 @@
 # Échange de 3 valeurs
 ----------------------
 
-On se débarrassera de trois variables entières \\(a, b\\) et \\(c\\).
+On a trois variables entières \\(a, b\\) et \\(c\\).
 
 - Écrire un programme permettant une permutation circulaire des valeurs des trois variables (\\(a\\) reçoit le contenu de \\(b, b\\) reçoit le contenu de \\(c\\) et \\(c\\) reçoit la valeur de a).
 
