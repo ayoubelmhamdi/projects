@@ -21,3 +21,4 @@ void affichage(int x, int b, int c) {
 
   printf("les valeur devient a=%d\tb=%d\tc=%d\n", x, b, c);
 }
+
