@@ -8,7 +8,7 @@
 ```
 
 ```matlab
-{{#include ../matlab/trpm-2/parties-proportionnelle.m}}
+{{#include ../matlab/trpm-s2/parties-proportionnelle.m}}
 ```
 
 </div>

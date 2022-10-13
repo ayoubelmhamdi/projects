@@ -8,7 +8,7 @@
 ```
 
 ```matlab
-{{#include ../matlab/trpm-2/newton-raphson.m}}
+{{#include ../matlab/trpm-s2/newton-raphson.m}}
 ```
 
 </div>

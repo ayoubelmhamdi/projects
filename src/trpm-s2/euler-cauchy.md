@@ -8,7 +8,7 @@
 ```
 
 ```matlab
-{{#include ../matlab/trpm-2/euler-cauchy.m}}
+{{#include ../matlab/trpm-s2/euler-cauchy.m}}
 ```
 
 </div>

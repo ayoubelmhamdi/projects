@@ -8,7 +8,7 @@
 ```
 
 ```matlab
-{{#include ../matlab/trpm-2/mauss-max.m}}
+{{#include ../matlab/trpm-s2/mauss-max.m}}
 ```
 
 </div>

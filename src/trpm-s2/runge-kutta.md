@@ -8,7 +8,7 @@
 ```
 
 ```matlab
-{{#include ../matlab/trpm-2/runge-kutta.m}}
+{{#include ../matlab/trpm-s2/runge-kutta.m}}
 ```
 
 </div>

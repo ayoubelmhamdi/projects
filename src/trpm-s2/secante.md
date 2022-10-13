@@ -8,7 +8,7 @@
 ```
 
 ```matlab
-{{#include ../matlab/trpm-2/secante.m}}
+{{#include ../matlab/trpm-s2/secante.m}}
 ```
 
 </div>

@@ -8,7 +8,7 @@
 ```
 
 ```matlab
-{{#include ../matlab/trpm-2/bissection.m}}
+{{#include ../matlab/trpm-s2/bissection.m}}
 ```
 
 </div>

@@ -8,7 +8,7 @@
 ```
 
 ```matlab
-{{#include ../matlab/trpm-2/seidel.m}}
+{{#include ../matlab/trpm-s2/seidel.m}}
 ```
 
 </div>
