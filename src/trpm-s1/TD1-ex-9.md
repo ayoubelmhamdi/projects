@@ -27,7 +27,7 @@ $$\sum_{i=1}^{n} \frac{1}{i^{2}}=\frac{\pi^{2}}{6}$$
 ```
 
 ```matlab
-{{#include ../matlab/trpm-1/TD1-ex-9-a.m}}
+{{#include ../matlab/trpm-1/TD1-ex-9-a.matlab}}
 ```
 </div>
 

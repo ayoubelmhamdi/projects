@@ -36,7 +36,7 @@ void affiche (int *tab, int nb);
 ```
 
 ```matlab
-{{#include ../matlab/trpm-1/TD2-ex-5.m}}
+{{#include ../matlab/trpm-1/TD2-ex-5.matlab}}
 ```
 
 </div>

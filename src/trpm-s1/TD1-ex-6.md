@@ -21,7 +21,7 @@ Exemple : 6 est parfait, car \\(1+2+3=6\\)b.
 ```
 
 ```matlab
-{{#include ../matlab/trpm-1/TD1-ex-6-a.m}}
+{{#include ../matlab/trpm-1/TD1-ex-6-a.matlab}}
 ```
 ```c
 {{#include ../c/trpm-s1/TD1-ex-6-b.c}}

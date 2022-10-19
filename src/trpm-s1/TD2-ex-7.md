@@ -15,6 +15,6 @@
 ```
 
 ```matlab
-{{#include ../matlab/trpm-1/TD2-ex-7.m}}
+{{#include ../matlab/trpm-1/TD2-ex-7.matlab}}
 ```
 </div>
