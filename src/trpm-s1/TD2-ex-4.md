@@ -26,7 +26,7 @@ Lorsque l’un des deux tableaux `tab1` ou `tab2` est épuisé, il suffit de rec
 ```
 
 ```matlab
-{{#include ../matlab/trpm-1/TD2-ex-4.matlab}}
+{{#include ../matlab/trpm-1/TD2-ex-4.m}}
 ```
 
 </div>

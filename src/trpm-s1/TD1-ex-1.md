@@ -16,7 +16,7 @@ On a trois variables entières \\(a, b\\) et \\(c\\).
 ```
 
 ```matlab
-{{#include ../matlab/trpm-1/TD1-ex-1-a.matlab}}
+{{#include ../matlab/trpm-1/TD1-ex-1-a.m}}
 ```
 
 </div>

@@ -13,6 +13,6 @@ Attention à séparer dans le programme le calcul lui-même et l’affichage du 
 ```
 
 ```matlab
-{{#include ../matlab/trpm-1/TD1-ex-2.matlab}}
+{{#include ../matlab/trpm-1/TD1-ex-2.m}}
 ```
 </div>

@@ -18,6 +18,6 @@ Avec comme longueur de la chaîne résultat : 28.
 ```
 
 ```matlab
-{{#include ../matlab/trpm-1/TD2-ex-8.matlab}}
+{{#include ../matlab/trpm-1/TD2-ex-8.m}}
 ```
 </div>

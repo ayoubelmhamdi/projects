@@ -15,6 +15,6 @@ Donner un programme de calcul de \\(n!\\) où \\(n\\) est entier, La valeur \\(n
 ```
 
 ```matlab
-{{#include ../matlab/trpm-1/TD1-ex-4.matlab}}
+{{#include ../matlab/trpm-1/TD1-ex-4.m}}
 ```
 </div>
