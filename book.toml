@@ -17,7 +17,7 @@ preferred-dark-theme = "navy"
 git-repository-url = "https://github.com/ayoubelmhamdi/projects"
 edit-url-template = "https://github.com/ayoubelmhamdi/projects/tree/master/{path}"
 additional-css = ["./theme/tabbed-code-blocks.css"]
-additional-js = ["./theme/tabbed-code-blocks.js"]
+additional-js = ["./theme/tabbed-code-blocks.js", "./theme/highlight.css"]
 
 
 mathjax-support = true

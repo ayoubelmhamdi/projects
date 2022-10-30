@@ -5,7 +5,7 @@ int main() {
   printf("Donner les valeurs de a et b \n");
   scanf("%d%d", &a, &b);
 
-  // permutation pourque la valeur max=a et min=b
+  % permutation pourque la valeur max=a et min=b
   if (a > b) {
     c = a;
     d = b;
@@ -14,7 +14,7 @@ int main() {
     d = a;
   }
 
-  // PGCD
+  % PGCD
 
   int rest = 1;
   while (rest != 0) {

@@ -28,4 +28,8 @@ On a trois variables entières \\(a, b\\) et \\(c\\).
 ```c
 {{#include ../c/trpm-s1/TD1-ex-1-b.c}}
 ```
+```matlab
+{{#include ../matlab/trpm-s1/TD1-ex-1-b.m}}
+```
+
 </div>

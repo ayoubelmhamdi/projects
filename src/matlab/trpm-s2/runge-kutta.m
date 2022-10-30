@@ -28,9 +28,9 @@ void m_euler() {
   }
   for (i = 1; i <= N; i++) {
     printf("x=%.6lf \t y=%.20e\n", P[i].x, P[i].y);
-    // fprintf(f1, "%.6lf                  %.6lf\n", res[i][0], res[i][1]);
+    % fprintf(f1, "%.6lf                  %.6lf\n", res[i][0], res[i][1]);
   }
-  // fclose(f1);
+  % fclose(f1);
 }
 int main() {
   m_euler();

@@ -2,7 +2,7 @@
 
 int main() {
   int a, sum = 0;
-  printf("Donner la valeur de a \n"); // a=1000
+  printf("Donner la valeur de a \n"); % a=1000
   scanf("%d", &a);
 
   for (int j = 2; j < a; j++) {

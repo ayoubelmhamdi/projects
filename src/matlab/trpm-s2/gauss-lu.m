@@ -2,14 +2,14 @@
 #include <stdio.h>
 
 #define MAX 100
-#define MAXT 101 // max col for table t[MAX][MAXT]
+#define MAXT 101 % max col for table t[MAX][MAXT]
 
 int decomposition(double a[MAX][MAX], double l[MAX][MAX], double u[MAX][MAX], int n);
 void resolution(double l[MAX][MAX], double u[MAX][MAX], double x[MAX],double y[MAX], double b[MAX], int n);
 
 int main() {
     int i, j, err;
-    int n = 4; //
+    int n = 4; %
     double a[MAX][MAX], b[MAX], x[MAX], y[MAX], u[MAX][MAX], l[MAX][MAX];
     a[1][1] = 8; a[1][2] = -4; a[1][3] = 3; a[1][4] = 7; b[1] = 12;
     a[2][1] = 4; a[2][2] = 2; a[2][3] = -6; a[2][4] = 4; b[2] = 1;

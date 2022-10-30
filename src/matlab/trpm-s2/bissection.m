@@ -3,7 +3,7 @@
 
 double f(double x) { 
    return cos(x) - x;  
-  // return x/4-1; 
+  % return x/4-1; 
 }
 
 int main() {

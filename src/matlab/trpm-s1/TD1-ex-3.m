@@ -1,34 +1,29 @@
-#include <math.h>
-#include <stdio.h>
+printf("calcule de equation de deuxième order\n");
 
-int main() {
-  int a, b, c;
-  printf("calcule de equation de deuxième order\n");
-  printf("Donner les 3 valeurs de a b c  \n");
-  scanf("%d%d%d", &a, &b, &c);
+a=input("Donner la valuer de a\n");
+b=input("Donner la valuer de b\n");
+c=input("Donner la valuer de c\n");
 
-  printf(" les solution de %dx^2+%dx+%d=0 est :\n", a, b, c);
-  if (a == 0) {
-    if (b == 0 && c == 0)
+printf("\nles solution de:\n\t %dx^2+%dx+%d=0\n", a, b, c);
+
+if a == 0  
+    if b == 0 && c == 0
       printf(" S = R\n");
-    else if (b == 0)
+    elseif b == 0
       printf("il n'y a pas de solution de l'équation dans R\n");
-    else if (c == 0)
+    elseif c == 0
       printf(" S= { 0 }\n");
     else
-      printf(" S= { %.02f }\n", (float)-c / b);
-
-  } else {
-    int delta = b * b - 4 * a * c;
-    if (delta == 0)
+      printf(" S= { %.02f }\n", -c / b);
+    end
+else 
+    delta = b * b - 4 * a * c;
+    if delta == 0
       printf(" S= { %.02f }\n", (float)-b / (2 * a));
-    else if (delta > 0)
-      printf(" S= { %.02f, %.02f }\n", (float)(-b + sqrt(delta)) / (2 * a),
-             (float)(-b - sqrt(delta)) / (2 * a));
-
+    elseif delta > 0
+      printf(" S= { %.02f, %.02f }\n", (-b + sqrt(delta)) / (2 * a), (-b - sqrt(delta)) / (2 * a));
     else
       printf("il n'y a pas de solution de l'équation dans R\n");
-  }
+    end
+end
 
-  return 0;
-}
