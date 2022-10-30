@@ -18,6 +18,6 @@ Partant de \\(y_{0}=1\\), on peut par des itérations successives calculer une v
 ```
 
 ```matlab
-{{#include ../matlab/trpm-1/TD1-ex-8.m}}
+{{#include ../matlab/trpm-s1/TD1-ex-8.m}}
 ```
 </div>

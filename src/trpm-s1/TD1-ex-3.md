@@ -12,6 +12,6 @@ Selon les mêmes principes que le programme précédent, écrire un programme ca
 ```
 
 ```matlab
-{{#include ../matlab/trpm-1/TD1-ex-3.m}}
+{{#include ../matlab/trpm-s1/TD1-ex-3.m}}
 ```
 </div>
