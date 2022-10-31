@@ -19,11 +19,15 @@ Exemple : 6 est parfait, car \\(1+2+3=6\\)b.
 ```c
 {{#include ../c/trpm-s1/TD1-ex-6-a.c}}
 ```
+```c
+{{#include ../c/trpm-s1/TD1-ex-6-b.c}}
+```
 
 ```matlab
 {{#include ../matlab/trpm-s1/TD1-ex-6-a.m}}
 ```
-```c
-{{#include ../c/trpm-s1/TD1-ex-6-b.c}}
+
+```matlab
+{{#include ../matlab/trpm-s1/TD1-ex-6-b.m}}
 ```
 </div>

@@ -1,19 +1,15 @@
-#include <stdio.h>
+sum = 0;
+a=input("Donner la valeur de a \n");
 
-int main() {
-  int a, sum = 0;
-  printf("Donner la valeur de a \n"); % a=1000
-  scanf("%d", &a);
+for j = 2:a-1
+  for i = 1:j-1
+    if mod(j , i) == 0
+      sum = sum + i;
+    end
+  end
 
-  for (int j = 2; j < a; j++) {
-    for (int i = 1; i < j; i++) {
-      if (j % i == 0)
-        sum = sum + i;
-    }
-
-    if (j == sum)
-      printf("le nomber %d parfait\n", j);
-    sum = 0;
-  }
-  return 0;
-}
+  if (j == sum)
+    printf("le nomber %d parfait\n", j);
+  end
+  sum = 0;
+end
