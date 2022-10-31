@@ -194,7 +194,25 @@ int main() {
   return 0;
 }
 </code></pre>
-<pre><code class="language-matlab">{{#include ../matlab/trpm-1/TD1-ex-4.m}}
+<pre><code class="language-matlab">
+function factoriel = fact(x)
+  % calcule de factoriel de x
+  factoriel = 1;
+  for i = 2:x 
+    factoriel = factoriel * i;
+  end
+endfunction
+
+printf(&quot;Calcule de calcule la somme de trois factoriels\n&quot;);
+a=input(&quot;Donner la valeur de a\n&quot;);
+b=input(&quot;Donner la valeur de b\n&quot;);
+c=input(&quot;Donner la valeur de c\n&quot;);
+
+
+resultat = fact(a) + fact(b) + fact(c);
+
+printf(&quot;Le factoriel de %d!+%d!+%d! égal: %d\n&quot;, a, b, c, resultat);
+
 </code></pre>
 </div>
 
@@ -236,5 +254,6 @@ int main() {
 
         <!-- Custom JS scripts -->
         <script type="text/javascript" src=".././theme/tabbed-code-blocks.js"></script>
+        <script type="text/javascript" src=".././theme/highlight.css"></script>
     </body>
 </html>

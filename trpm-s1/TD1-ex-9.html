@@ -207,7 +207,16 @@ int addition(int nomber) {
   return resultat;
 }
 </code></pre>
-<pre><code class="language-matlab">{{#include ../matlab/trpm-1/TD1-ex-9-a.m}}
+<pre><code class="language-matlab">function resultat = addition(nomber)
+  resultat = 0;
+  for i = 0:nomber
+    resultat = resultat + i;
+  end
+endfunction
+
+N=input(&quot;Donner la valeur de a \n&quot;);
+sum = addition(N);
+printf(&quot;la sum egal %d\n&quot;, sum);
 </code></pre>
 </div>
 <div class="tabbed-blocks">
@@ -299,5 +308,6 @@ int addition(int nomber) {
 
         <!-- Custom JS scripts -->
         <script type="text/javascript" src=".././theme/tabbed-code-blocks.js"></script>
+        <script type="text/javascript" src=".././theme/highlight.css"></script>
     </body>
 </html>

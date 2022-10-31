@@ -218,7 +218,30 @@ int main() {
   return 0;
 }
 </code></pre>
-<pre><code class="language-matlab">{{#include ../matlab/trpm-1/TD1-ex-7.m}}
+<pre><code class="language-matlab">
+a=input(&quot;Donner les valeur de a\n&quot;);
+b=input(&quot;Donner les valeur de b\n&quot;);
+
+% permutation parce que la valeur max=a et min=b
+if (a &gt; b)
+  c = a;
+  d = b;
+else
+  c = b;
+  d = a;
+end
+
+% PGCD
+
+rest = 1;
+while rest ~= 0
+  rest = mdo(c,d);
+  c = d;
+  d = rest;
+end
+printf(&quot;le PGCD de %d et %d est %d\n&quot;, a, b, c);
+
+
 </code></pre>
 </div>
 
@@ -260,5 +283,6 @@ int main() {
 
         <!-- Custom JS scripts -->
         <script type="text/javascript" src=".././theme/tabbed-code-blocks.js"></script>
+        <script type="text/javascript" src=".././theme/highlight.css"></script>
     </body>
 </html>

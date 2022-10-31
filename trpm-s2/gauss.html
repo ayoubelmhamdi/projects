@@ -257,7 +257,7 @@ int sl_gauss_aff(double a[NMAX][NMAX], double b[NMAX], int n) {
   return (err);
 }
 </code></pre>
-<pre><code class="language-matlab">// LA METHODE DE GAUSS
+<pre><code class="language-matlab">% LA METHODE DE GAUSS
 #include &lt;math.h&gt;
 #include &lt;stdio.h&gt;
 #define NMAX 5
@@ -270,11 +270,11 @@ int main() {
   n = 4;
   printf(&quot;Méthode de Gauss:youssef\n&quot;);
   double a[NMAX][NMAX] = {
-      {0, 0, 0, 0, 0},      //
-      {0, 8, -4, 3, 7},     //
-      {0, 4, 2, -6, 4},     //
-      {0, -16, 6, -2, -15}, //
-      {0, 6, 10, -15, 10},  //
+      {0, 0, 0, 0, 0},      %
+      {0, 8, -4, 3, 7},     %
+      {0, 4, 2, -6, 4},     %
+      {0, -16, 6, -2, -15}, %
+      {0, 6, 10, -15, 10},  %
   };
   double b[NMAX] = {12, 1, -19, 1};
 
@@ -394,5 +394,6 @@ int sl_gauss_aff(double a[NMAX][NMAX], double b[NMAX], int n) {
 
         <!-- Custom JS scripts -->
         <script type="text/javascript" src=".././theme/tabbed-code-blocks.js"></script>
+        <script type="text/javascript" src=".././theme/highlight.css"></script>
     </body>
 </html>

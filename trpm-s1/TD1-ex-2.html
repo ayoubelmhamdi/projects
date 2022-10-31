@@ -186,7 +186,24 @@ int main() {
   return 0;
 }
 </code></pre>
-<pre><code class="language-matlab">{{#include ../matlab/trpm-1/TD1-ex-2.m}}
+<pre><code class="language-matlab">
+printf(&quot;calcule de equation de premier order\n&quot;);
+
+a=input(&quot;Donner la valuer de a\n&quot;);
+b=input(&quot;Donner la valuer de b\n&quot;);
+
+printf(&quot;\nles solution de:\n\t %dx+%d=0\n&quot;, a, b);
+
+if a == 0 &amp;&amp; b == 0 
+    printf(&quot; S = R\n&quot;);
+elseif a == 0 
+    printf(&quot;il n'y a pas de solution de l'équation dans R\n&quot;);
+elseif b == 0 
+    printf(&quot; S= { 0 }\n&quot;);
+else 
+    printf(&quot; S= { %.02f }\n&quot;, -b / a);
+end
+
 </code></pre>
 </div>
 
@@ -228,5 +245,6 @@ int main() {
 
         <!-- Custom JS scripts -->
         <script type="text/javascript" src=".././theme/tabbed-code-blocks.js"></script>
+        <script type="text/javascript" src=".././theme/highlight.css"></script>
     </body>
 </html>

@@ -194,7 +194,18 @@ void affichage(int x, int b, int c) {
   printf(&quot;les valeur devient a=%d\tb=%d\tc=%d\n&quot;, x, b, c);
 }
 </code></pre>
-<pre><code class="language-matlab">{{#include ../matlab/trpm-1/TD1-ex-1-a.m}}
+<pre><code class="language-matlab">function affichage(a, b, c)
+    aide=a;
+    a=b;
+    c=aide;
+    printf(&quot;les valeur devient a=%d\tb=%d\tc=%d\n&quot;, a, b);
+end
+
+a=input(&quot;Donner la valuer de a\n&quot;);
+b=input(&quot;Donner la valuer de b\n&quot;);
+
+
+affichage(a,b)
 </code></pre>
 </div>
 <h1 id="permutation-de-trois-nombres-a-aide-des-calculs-mathématique"><a class="header" href="#permutation-de-trois-nombres-a-aide-des-calculs-mathématique">Permutation de trois nombres a aide des calculs mathématique</a></h1>
@@ -224,6 +235,21 @@ int main() {
   printf(&quot;les valeur devien a=%d\tb=%d\tc=%d\n&quot;, a, b, c);
   return 0;
 }
+</code></pre>
+<pre><code class="language-matlab">
+function affichage(a, b, c)
+      a = a - b; % a=a-b
+      b = b + a; % b+(a-b)=a
+      a = b - a; % (a)-(a-b)=b
+
+    printf(&quot;les valeur devient a=%d\tb=%d\tc=%d\n&quot;, a, b);
+end
+
+a=input(&quot;Donner la valuer de a\n&quot;);
+b=input(&quot;Donner la valuer de b\n&quot;);
+
+
+affichage(a,b)
 </code></pre>
 </div>
 
@@ -265,5 +291,6 @@ int main() {
 
         <!-- Custom JS scripts -->
         <script type="text/javascript" src=".././theme/tabbed-code-blocks.js"></script>
+        <script type="text/javascript" src=".././theme/highlight.css"></script>
     </body>
 </html>

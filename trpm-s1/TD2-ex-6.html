@@ -242,7 +242,69 @@ int main(int argc, char *argv[]) {
   return 0;
 }
 </code></pre>
-<pre><code class="language-matlab">{{#include ../matlab/trpm-1/TD2-ex-6.m}}
+<pre><code class="language-matlab">#include &lt;stdio.h&gt;
+
+int lire_dim(int n) { return n; }
+
+int convert(int N, int *bin, int nb) {
+  int i = 0;
+  for (i = 0; nb &gt; 0; i++) {
+    bin[i] = nb % 2;
+    nb = nb / 2;
+  }
+  return i;
+}
+
+void lire_matrice(int l, int *mat) {
+  for (int i = 0; i &lt; l; i++) {
+    for (int j = 0; j &lt; l; j++) {
+      printf(&quot;mat[%d][%d]=&quot;, i, j);
+      scanf(&quot;%d%d&quot;, mat + i, mat + j);
+    }
+  }
+}
+
+void affichage(int l, int tab[l][l]) {
+  printf(&quot;\naffichage de tab[]\n&quot;);
+  for (int i = 0; i &lt; l; i++) {
+    for (int j = 0; j &lt; l; j++) {
+      /* if you want to use pointer use */
+      /* func(...,`int** tab`,...) */
+      /* if you don't want to use pointer*/
+      /* must used args like that func(....,int a,int b,int tab[a][b],...), */
+      /* printf(&quot;%d&quot;, tab[i][j]); */
+      printf(&quot;%d\t&quot;, tab[i][j]);
+    }
+    printf(&quot;\n\n&quot;);
+  }
+}
+
+void multi_2_matrices(int n, int mat1[n][n], int mat2[n][n], int mat3[n][n]) {
+  for (int i = 0; i &lt; n; i++) {
+    for (int j = 0; j &lt; n; j++) {
+      int sum = 0;
+      for (int k = 0; k &lt; n; k++) {
+        sum = sum + mat1[i][k] * mat2[k][j];
+      }
+      mat3[i][j] = sum;
+    }
+  }
+}
+
+int main(int argc, char *argv[]) {
+  int l = 2;
+  /* int mat1[l][l]; */
+  /* int mat2[l][l]; */
+  int mat1[2][2] = {{1, 0}, {0, 2}};
+  int mat2[2][2] = {{3, 0}, {0, 4}};
+  int mat3[2][2];
+
+  multi_2_matrices(l, mat1, mat2, mat3);
+  affichage(2, mat1);
+  affichage(2, mat2);
+  affichage(2, mat3);
+  return 0;
+}
 </code></pre>
 </div>
 
@@ -284,5 +346,6 @@ int main(int argc, char *argv[]) {
 
         <!-- Custom JS scripts -->
         <script type="text/javascript" src=".././theme/tabbed-code-blocks.js"></script>
+        <script type="text/javascript" src=".././theme/highlight.css"></script>
     </body>
 </html>

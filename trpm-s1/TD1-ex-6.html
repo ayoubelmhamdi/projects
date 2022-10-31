@@ -191,8 +191,6 @@ int main() {
   return 0;
 }
 </code></pre>
-<pre><code class="language-matlab">{{#include ../matlab/trpm-1/TD1-ex-6-a.m}}
-</code></pre>
 <pre><code class="language-c">#include &lt;stdio.h&gt;
 
 int main() {
@@ -212,6 +210,38 @@ int main() {
   }
   return 0;
 }
+</code></pre>
+<pre><code class="language-matlab">
+sum = 0;
+a=input(&quot;Donner la valeur de a \n&quot;);
+
+for i = 1:a-1
+  if mod(a,i) == 0
+    sum = sum + i;
+  end
+end
+
+if a ~= sum
+  printf(&quot;n'est pas parfait\n&quot;);
+else
+  printf(&quot;le nombre est parfait\n&quot;);
+end
+</code></pre>
+<pre><code class="language-matlab">sum = 0;
+a=input(&quot;Donner la valeur de a \n&quot;);
+
+for j = 2:a-1
+  for i = 1:j-1
+    if mod(j , i) == 0
+      sum = sum + i;
+    end
+  end
+
+  if (j == sum)
+    printf(&quot;le nomber %d parfait\n&quot;, j);
+  end
+  sum = 0;
+end
 </code></pre>
 </div>
 
@@ -253,5 +283,6 @@ int main() {
 
         <!-- Custom JS scripts -->
         <script type="text/javascript" src=".././theme/tabbed-code-blocks.js"></script>
+        <script type="text/javascript" src=".././theme/highlight.css"></script>
     </body>
 </html>

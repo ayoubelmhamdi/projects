@@ -182,7 +182,21 @@ int main() {
   return 0;
 }
 </code></pre>
-<pre><code class="language-matlab">{{#include ../matlab/trpm-1/TD1-ex-5.m}}
+<pre><code class="language-matlab">
+P = 1;
+a=input(&quot;Donner la valeur de a \n&quot;);
+
+for i = 2:a-1
+    if mod(a,i) == 0
+        P = 0;
+    end
+end
+
+if (P == 0)
+    printf(&quot;n'est pas premier\n&quot;);
+else
+    printf(&quot;le nombre est premier\n&quot;);
+end
 </code></pre>
 </div>
 
@@ -224,5 +238,6 @@ int main() {
 
         <!-- Custom JS scripts -->
         <script type="text/javascript" src=".././theme/tabbed-code-blocks.js"></script>
+        <script type="text/javascript" src=".././theme/highlight.css"></script>
     </body>
 </html>

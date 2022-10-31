@@ -335,7 +335,18 @@ void affichage(int x, int b, int c) {
   printf(&quot;les valeur devient a=%d\tb=%d\tc=%d\n&quot;, x, b, c);
 }
 </code></pre>
-<pre><code class="language-matlab">{{#include ../matlab/trpm-1/TD1-ex-1-a.m}}
+<pre><code class="language-matlab">function affichage(a, b, c)
+    aide=a;
+    a=b;
+    c=aide;
+    printf(&quot;les valeur devient a=%d\tb=%d\tc=%d\n&quot;, a, b);
+end
+
+a=input(&quot;Donner la valuer de a\n&quot;);
+b=input(&quot;Donner la valuer de b\n&quot;);
+
+
+affichage(a,b)
 </code></pre>
 </div>
 <h1 id="permutation-de-trois-nombres-a-aide-des-calculs-mathématique"><a class="header" href="#permutation-de-trois-nombres-a-aide-des-calculs-mathématique">Permutation de trois nombres a aide des calculs mathématique</a></h1>
@@ -366,6 +377,21 @@ int main() {
   return 0;
 }
 </code></pre>
+<pre><code class="language-matlab">
+function affichage(a, b, c)
+      a = a - b; % a=a-b
+      b = b + a; % b+(a-b)=a
+      a = b - a; % (a)-(a-b)=b
+
+    printf(&quot;les valeur devient a=%d\tb=%d\tc=%d\n&quot;, a, b);
+end
+
+a=input(&quot;Donner la valuer de a\n&quot;);
+b=input(&quot;Donner la valuer de b\n&quot;);
+
+
+affichage(a,b)
+</code></pre>
 </div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="Équation-du-premier-degré-1"><a class="header" href="#Équation-du-premier-degré-1">Équation du premier degré</a></h1>
 <hr />
@@ -395,7 +421,24 @@ int main() {
   return 0;
 }
 </code></pre>
-<pre><code class="language-matlab">{{#include ../matlab/trpm-1/TD1-ex-2.m}}
+<pre><code class="language-matlab">
+printf(&quot;calcule de equation de premier order\n&quot;);
+
+a=input(&quot;Donner la valuer de a\n&quot;);
+b=input(&quot;Donner la valuer de b\n&quot;);
+
+printf(&quot;\nles solution de:\n\t %dx+%d=0\n&quot;, a, b);
+
+if a == 0 &amp;&amp; b == 0 
+    printf(&quot; S = R\n&quot;);
+elseif a == 0 
+    printf(&quot;il n'y a pas de solution de l'équation dans R\n&quot;);
+elseif b == 0 
+    printf(&quot; S= { 0 }\n&quot;);
+else 
+    printf(&quot; S= { %.02f }\n&quot;, -b / a);
+end
+
 </code></pre>
 </div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="Équation-du-second-degré-1"><a class="header" href="#Équation-du-second-degré-1">Équation du second degré</a></h1>
@@ -437,7 +480,35 @@ int main() {
   return 0;
 }
 </code></pre>
-<pre><code class="language-matlab">{{#include ../matlab/trpm-1/TD1-ex-3.m}}
+<pre><code class="language-matlab">printf(&quot;calcule de equation de deuxième order\n&quot;);
+
+a=input(&quot;Donner la valuer de a\n&quot;);
+b=input(&quot;Donner la valuer de b\n&quot;);
+c=input(&quot;Donner la valuer de c\n&quot;);
+
+printf(&quot;\nles solution de:\n\t %dx^2+%dx+%d=0\n&quot;, a, b, c);
+
+if a == 0  
+    if b == 0 &amp;&amp; c == 0
+      printf(&quot; S = R\n&quot;);
+    elseif b == 0
+      printf(&quot;il n'y a pas de solution de l'équation dans R\n&quot;);
+    elseif c == 0
+      printf(&quot; S= { 0 }\n&quot;);
+    else
+      printf(&quot; S= { %.02f }\n&quot;, -c / b);
+    end
+else 
+    delta = b * b - 4 * a * c;
+    if delta == 0
+      printf(&quot; S= { %.02f }\n&quot;, (float)-b / (2 * a));
+    elseif delta &gt; 0
+      printf(&quot; S= { %.02f, %.02f }\n&quot;, (-b + sqrt(delta)) / (2 * a), (-b - sqrt(delta)) / (2 * a));
+    else
+      printf(&quot;il n'y a pas de solution de l'équation dans R\n&quot;);
+    end
+end
+
 </code></pre>
 </div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="factorielle-1"><a class="header" href="#factorielle-1">Factorielle</a></h1>
@@ -476,7 +547,25 @@ int main() {
   return 0;
 }
 </code></pre>
-<pre><code class="language-matlab">{{#include ../matlab/trpm-1/TD1-ex-4.m}}
+<pre><code class="language-matlab">
+function factoriel = fact(x)
+  % calcule de factoriel de x
+  factoriel = 1;
+  for i = 2:x 
+    factoriel = factoriel * i;
+  end
+endfunction
+
+printf(&quot;Calcule de calcule la somme de trois factoriels\n&quot;);
+a=input(&quot;Donner la valeur de a\n&quot;);
+b=input(&quot;Donner la valeur de b\n&quot;);
+c=input(&quot;Donner la valeur de c\n&quot;);
+
+
+resultat = fact(a) + fact(b) + fact(c);
+
+printf(&quot;Le factoriel de %d!+%d!+%d! égal: %d\n&quot;, a, b, c, resultat);
+
 </code></pre>
 </div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="nombres-premiers-1"><a class="header" href="#nombres-premiers-1">Nombres premiers</a></h1>
@@ -503,7 +592,21 @@ int main() {
   return 0;
 }
 </code></pre>
-<pre><code class="language-matlab">{{#include ../matlab/trpm-1/TD1-ex-5.m}}
+<pre><code class="language-matlab">
+P = 1;
+a=input(&quot;Donner la valeur de a \n&quot;);
+
+for i = 2:a-1
+    if mod(a,i) == 0
+        P = 0;
+    end
+end
+
+if (P == 0)
+    printf(&quot;n'est pas premier\n&quot;);
+else
+    printf(&quot;le nombre est premier\n&quot;);
+end
 </code></pre>
 </div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="nombres-parfaits-1"><a class="header" href="#nombres-parfaits-1">Nombres parfaits</a></h1>
@@ -539,8 +642,6 @@ int main() {
   return 0;
 }
 </code></pre>
-<pre><code class="language-matlab">{{#include ../matlab/trpm-1/TD1-ex-6-a.m}}
-</code></pre>
 <pre><code class="language-c">#include &lt;stdio.h&gt;
 
 int main() {
@@ -560,6 +661,38 @@ int main() {
   }
   return 0;
 }
+</code></pre>
+<pre><code class="language-matlab">
+sum = 0;
+a=input(&quot;Donner la valeur de a \n&quot;);
+
+for i = 1:a-1
+  if mod(a,i) == 0
+    sum = sum + i;
+  end
+end
+
+if a ~= sum
+  printf(&quot;n'est pas parfait\n&quot;);
+else
+  printf(&quot;le nombre est parfait\n&quot;);
+end
+</code></pre>
+<pre><code class="language-matlab">sum = 0;
+a=input(&quot;Donner la valeur de a \n&quot;);
+
+for j = 2:a-1
+  for i = 1:j-1
+    if mod(j , i) == 0
+      sum = sum + i;
+    end
+  end
+
+  if (j == sum)
+    printf(&quot;le nomber %d parfait\n&quot;, j);
+  end
+  sum = 0;
+end
 </code></pre>
 </div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="pgcd---algorithme-deuclide-1"><a class="header" href="#pgcd---algorithme-deuclide-1">PGCD - Algorithme d’Euclide</a></h1>
@@ -622,7 +755,30 @@ int main() {
   return 0;
 }
 </code></pre>
-<pre><code class="language-matlab">{{#include ../matlab/trpm-1/TD1-ex-7.m}}
+<pre><code class="language-matlab">
+a=input(&quot;Donner les valeur de a\n&quot;);
+b=input(&quot;Donner les valeur de b\n&quot;);
+
+% permutation parce que la valeur max=a et min=b
+if (a &gt; b)
+  c = a;
+  d = b;
+else
+  c = b;
+  d = a;
+end
+
+% PGCD
+
+rest = 1;
+while rest ~= 0
+  rest = mdo(c,d);
+  c = d;
+  d = rest;
+end
+printf(&quot;le PGCD de %d et %d est %d\n&quot;, a, b, c);
+
+
 </code></pre>
 </div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="calcul-dune-racine-carrée-par-itération-1"><a class="header" href="#calcul-dune-racine-carrée-par-itération-1">Calcul d’une racine carrée par itération</a></h1>
@@ -657,7 +813,16 @@ int main() {
   return 0;
 }
 </code></pre>
-<pre><code class="language-matlab">{{#include ../matlab/trpm-1/TD1-ex-8.m}}
+<pre><code class="language-matlab">
+racine = 1;
+error = 0.000001;
+x=input(&quot;Donner la valeur de a \n&quot;);
+
+while (abs(racine * racine - x) &gt;= error)
+  racine = (1 / 2.0) * (x / racine + racine);
+end
+
+printf(&quot;le racine de %0.1f est %.20f\n&quot;, x, racine);
 </code></pre>
 </div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="calcul-des-séries-entières-1"><a class="header" href="#calcul-des-séries-entières-1">Calcul des séries entières</a></h1>
@@ -709,7 +874,16 @@ int addition(int nomber) {
   return resultat;
 }
 </code></pre>
-<pre><code class="language-matlab">{{#include ../matlab/trpm-1/TD1-ex-9-a.m}}
+<pre><code class="language-matlab">function resultat = addition(nomber)
+  resultat = 0;
+  for i = 0:nomber
+    resultat = resultat + i;
+  end
+endfunction
+
+N=input(&quot;Donner la valeur de a \n&quot;);
+sum = addition(N);
+printf(&quot;la sum egal %d\n&quot;, sum);
 </code></pre>
 </div>
 <div class="tabbed-blocks">
@@ -909,7 +1083,7 @@ Avec comme longueur de la chaîne résultat : 28.</p>
 <div class="tabbed-blocks">
 <pre><code class="language-c">
 </code></pre>
-<pre><code class="language-matlab">{{#include ../matlab/trpm-1/TD2-ex-1.m}}
+<pre><code class="language-matlab">
 </code></pre>
 <pre><code class="language-matlab">
 </code></pre>
@@ -920,7 +1094,7 @@ Avec comme longueur de la chaîne résultat : 28.</p>
 <div class="tabbed-blocks">
 <pre><code class="language-c">
 </code></pre>
-<pre><code class="language-matlab">{{#include ../matlab/trpm-1/TD2-ex-2.m}}
+<pre><code class="language-matlab">
 </code></pre>
 </div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="exercice-2"><a class="header" href="#exercice-2">EXERCICE</a></h1>
@@ -933,7 +1107,7 @@ Avec comme longueur de la chaîne résultat : 28.</p>
 <p>Écrire un programme qui teste les deux fonctions à l’aide des valeurs lues au clavier.</p>
 <pre><code class="language-c">
 </code></pre>
-<pre><code class="language-matlab">{{#include ../matlab/trpm-1/TD2-ex-3.m}}
+<pre><code class="language-matlab">
 </code></pre>
 </div>
 <div style="break-before: page; page-break-before: always;"></div><h3 id="problème--1"><a class="header" href="#problème--1">Problème :</a></h3>
@@ -1006,7 +1180,56 @@ int main(int argc, char *argv[]) {
   return 0;
 }
 </code></pre>
-<pre><code class="language-matlab">{{#include ../matlab/trpm-1/TD2-ex-4.m}}
+<pre><code class="language-matlab">
+function tab = tri_tableu(tab, n)
+  for i = 1:n
+    for j = i:n
+      if tab(i) &gt; tab(j)
+        aide = tab(i);
+        tab(i) = tab(j);
+        tab(j) = aide;
+      end
+    end
+  end
+endfunction
+
+tab1 = [8, 6, 4, 2, 12, 10];
+tab2 = [5, 15, 10];
+n1 = 6;
+n2 = 3;
+n3 = n1 + n2;
+tab1 = tri_tableu(tab1, n1);
+tab2 = tri_tableu(tab2, n2);
+% disp(tab1)
+% disp(tab2)
+
+for i = 1:n3
+  if (i &lt;= n1)
+    tab3(i) = tab1(i);
+  else
+    tab3(i) = tab2(i - n1);
+  end
+end
+
+
+printf(&quot;\naffichage de tab1()\n&quot;);
+% for i = 1:n1
+%   printf(&quot;%d\t&quot;, tab1(i));
+% end
+disp(tab1)
+
+printf(&quot;\naffichage de tab2()\n&quot;);
+% for i = 1:n2
+%   printf(&quot;%d\t&quot;, tab2(i));
+% end
+disp(tab2)
+
+printf(&quot;\naffichage de tab3()\n&quot;);
+% for i = 1:n3
+%   printf(&quot;%d\t&quot;, tab3(i));
+% end
+disp(tab3)
+
 </code></pre>
 </div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="exercice-3"><a class="header" href="#exercice-3">EXERCICE</a></h1>
@@ -1081,7 +1304,36 @@ int main(int argc, char *argv[]) {
   return 0;
 }
 </code></pre>
-<pre><code class="language-matlab">{{#include ../matlab/trpm-1/TD2-ex-5.m}}
+<pre><code class="language-matlab">
+function i =  convert(N,bin,nb)
+  i = 0;
+  for (i = 0; nb &gt; 0; i++) {
+    bin(i) = mod(nb, 2);
+    nb = nb / 2;
+  end
+end
+
+function affichage(tab, nb,int N)
+  printf(&quot;\naffichage de tab()\n&quot;);
+  for i=0:N-1
+    printf(&quot;%d&quot;, tab(i));
+  end
+end
+
+function inverse(tab, N)
+  for (int i = 0; i &lt; N / 2; i++)
+    int aide = tab[i];
+    tab[i] = tab[N - i - 1];
+    tab[N - i - 1] = aide;
+  end
+end
+
+int i; N = 6; x = 13;
+
+N,tab = convert(N, tab, x);
+inverse(tab, N);
+affichage(tab, x, N);
+
 </code></pre>
 </div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="exercice-4"><a class="header" href="#exercice-4">EXERCICE</a></h1>
@@ -1168,7 +1420,69 @@ int main(int argc, char *argv[]) {
   return 0;
 }
 </code></pre>
-<pre><code class="language-matlab">{{#include ../matlab/trpm-1/TD2-ex-6.m}}
+<pre><code class="language-matlab">#include &lt;stdio.h&gt;
+
+int lire_dim(int n) { return n; }
+
+int convert(int N, int *bin, int nb) {
+  int i = 0;
+  for (i = 0; nb &gt; 0; i++) {
+    bin[i] = nb % 2;
+    nb = nb / 2;
+  }
+  return i;
+}
+
+void lire_matrice(int l, int *mat) {
+  for (int i = 0; i &lt; l; i++) {
+    for (int j = 0; j &lt; l; j++) {
+      printf(&quot;mat[%d][%d]=&quot;, i, j);
+      scanf(&quot;%d%d&quot;, mat + i, mat + j);
+    }
+  }
+}
+
+void affichage(int l, int tab[l][l]) {
+  printf(&quot;\naffichage de tab[]\n&quot;);
+  for (int i = 0; i &lt; l; i++) {
+    for (int j = 0; j &lt; l; j++) {
+      /* if you want to use pointer use */
+      /* func(...,`int** tab`,...) */
+      /* if you don't want to use pointer*/
+      /* must used args like that func(....,int a,int b,int tab[a][b],...), */
+      /* printf(&quot;%d&quot;, tab[i][j]); */
+      printf(&quot;%d\t&quot;, tab[i][j]);
+    }
+    printf(&quot;\n\n&quot;);
+  }
+}
+
+void multi_2_matrices(int n, int mat1[n][n], int mat2[n][n], int mat3[n][n]) {
+  for (int i = 0; i &lt; n; i++) {
+    for (int j = 0; j &lt; n; j++) {
+      int sum = 0;
+      for (int k = 0; k &lt; n; k++) {
+        sum = sum + mat1[i][k] * mat2[k][j];
+      }
+      mat3[i][j] = sum;
+    }
+  }
+}
+
+int main(int argc, char *argv[]) {
+  int l = 2;
+  /* int mat1[l][l]; */
+  /* int mat2[l][l]; */
+  int mat1[2][2] = {{1, 0}, {0, 2}};
+  int mat2[2][2] = {{3, 0}, {0, 4}};
+  int mat3[2][2];
+
+  multi_2_matrices(l, mat1, mat2, mat3);
+  affichage(2, mat1);
+  affichage(2, mat2);
+  affichage(2, mat3);
+  return 0;
+}
 </code></pre>
 </div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="exercice-5"><a class="header" href="#exercice-5">EXERCICE</a></h1>
@@ -1187,7 +1501,7 @@ int main(int argc, char *argv[]) {
 <div class="tabbed-blocks">
 <pre><code class="language-c">
 </code></pre>
-<pre><code class="language-matlab">{{#include ../matlab/trpm-1/TD2-ex-7.m}}
+<pre><code class="language-matlab">
 </code></pre>
 </div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="exercice-6"><a class="header" href="#exercice-6">EXERCICE</a></h1>
@@ -1206,7 +1520,7 @@ Avec comme longueur de la chaîne résultat : 28.</p>
 <div class="tabbed-blocks">
 <pre><code class="language-c">
 </code></pre>
-<pre><code class="language-matlab">{{#include ../matlab/trpm-1/TD2-ex-8.m}}
+<pre><code class="language-matlab">
 </code></pre>
 </div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="exercice-7"><a class="header" href="#exercice-7">EXERCICE</a></h1>
@@ -1228,7 +1542,7 @@ Avec comme longueur de la chaîne résultat : 28.</p>
 <div class="tabbed-blocks">
 <pre><code class="language-c">
 </code></pre>
-<pre><code class="language-matlab">{{#include ../matlab/trpm-1/TD2-ex-9.m}}
+<pre><code class="language-matlab">
 </code></pre>
 </div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="master-trpm-s2"><a class="header" href="#master-trpm-s2">MASTER TRPM S2</a></h1>
@@ -1327,7 +1641,7 @@ int main() {
 
 double f(double x) { 
    return cos(x) - x;  
-  // return x/4-1; 
+  % return x/4-1; 
 }
 
 int main() {
@@ -1419,7 +1733,7 @@ double secante(double x0, double x1, double eps) {
   return x2;
 }
 </code></pre>
-<pre><code class="language-matlab">// METHODE DES TRAPEZES (Forme adaptative)
+<pre><code class="language-matlab">% METHODE DES TRAPEZES (Forme adaptative)
 #include &lt;math.h&gt;
 #include &lt;stdio.h&gt;
 
@@ -1434,11 +1748,11 @@ int main() {
   x1 = 1;
   x0 = 0;
   eps = 0.00000000001;
-  // solution = qu_trapezes_adapt(a, b, eps, n);
-  // solution = trapezes_adapt1(a, b, eps, n);
-  // solution = trapezes_adapt2(a, b, eps, n);
+  % solution = qu_trapezes_adapt(a, b, eps, n);
+  % solution = trapezes_adapt1(a, b, eps, n);
+  % solution = trapezes_adapt2(a, b, eps, n);
   solution = secante(x0, x1, eps);
-  // solution = trapezes_adapt4(a, b, eps, n);
+  % solution = trapezes_adapt4(a, b, eps, n);
   printf(&quot;Méthode des trapèzes (formule adaptative)\n&quot;);
   printf(&quot;I = %.20lf&quot;, solution);
 
@@ -1567,7 +1881,7 @@ int sl_gauss_aff(double a[NMAX][NMAX], double b[NMAX], int n) {
   return (err);
 }
 </code></pre>
-<pre><code class="language-matlab">// LA METHODE DE GAUSS
+<pre><code class="language-matlab">% LA METHODE DE GAUSS
 #include &lt;math.h&gt;
 #include &lt;stdio.h&gt;
 #define NMAX 5
@@ -1580,11 +1894,11 @@ int main() {
   n = 4;
   printf(&quot;Méthode de Gauss:youssef\n&quot;);
   double a[NMAX][NMAX] = {
-      {0, 0, 0, 0, 0},      //
-      {0, 8, -4, 3, 7},     //
-      {0, 4, 2, -6, 4},     //
-      {0, -16, 6, -2, -15}, //
-      {0, 6, 10, -15, 10},  //
+      {0, 0, 0, 0, 0},      %
+      {0, 8, -4, 3, 7},     %
+      {0, 4, 2, -6, 4},     %
+      {0, -16, 6, -2, -15}, %
+      {0, 6, 10, -15, 10},  %
   };
   double b[NMAX] = {12, 1, -19, 1};
 
@@ -1759,7 +2073,7 @@ int sl_gauss_pivmax(double a[NMAX][NMAX], double b[NMAX], int n) {
     return (err);
   }
 </code></pre>
-<pre><code class="language-matlab">// LA METHODE DE GAUSS PIVOT MAXIMUM
+<pre><code class="language-matlab">% LA METHODE DE GAUSS PIVOT MAXIMUM
 #include &lt;math.h&gt;
 #include &lt;stdio.h&gt;
 #define NMAX 5
@@ -1956,14 +2270,14 @@ void resolution(double l[MAX][MAX], double u[MAX][MAX], double x[MAX],double y[M
 #include &lt;stdio.h&gt;
 
 #define MAX 100
-#define MAXT 101 // max col for table t[MAX][MAXT]
+#define MAXT 101 % max col for table t[MAX][MAXT]
 
 int decomposition(double a[MAX][MAX], double l[MAX][MAX], double u[MAX][MAX], int n);
 void resolution(double l[MAX][MAX], double u[MAX][MAX], double x[MAX],double y[MAX], double b[MAX], int n);
 
 int main() {
     int i, j, err;
-    int n = 4; //
+    int n = 4; %
     double a[MAX][MAX], b[MAX], x[MAX], y[MAX], u[MAX][MAX], l[MAX][MAX];
     a[1][1] = 8; a[1][2] = -4; a[1][3] = 3; a[1][4] = 7; b[1] = 12;
     a[2][1] = 4; a[2][2] = 2; a[2][3] = -6; a[2][4] = 4; b[2] = 1;
@@ -2121,7 +2435,7 @@ void gauss_seidel(double a[MAX][MAX], double b[MAX], double x[MAX], int n,
 #include &lt;stdio.h&gt;
 
 #define MAX 5
-#define MAXT 5 // max col for table t[MAX][MAXT]
+#define MAXT 5 % max col for table t[MAX][MAXT]
 
 void gauss_seidel(double a[MAX][MAX], double b[MAX], double x[MAX], int n,
                   double iter, double eps);
@@ -2129,23 +2443,23 @@ void gauss_seidel(double a[MAX][MAX], double b[MAX], double x[MAX], int n,
 int main() {
   int i, j;
   double iter = 21, eps = 0.00001;
-  int n = 4; //
+  int n = 4; %
   double a[MAX][MAX] = {
-      {0, 0, 0, 0, 0},     //
-      {0, -16, 6, -2, -5}, //
-      {0, 3, 10, -5, 1},   //
-      {0, -4, 1, 18, 2},   //
+      {0, 0, 0, 0, 0},     %
+      {0, -16, 6, -2, -5}, %
+      {0, 3, 10, -5, 1},   %
+      {0, -4, 1, 18, 2},   %
       {0, 1, 2, 2, -14},
   };
   double b[MAX] = {0, -19, 1, 12, 1};
   double x[MAX] = {0, 0, 0, 0, 0};
 
-  // printf(&quot;           A               B\n&quot;);
-  // for (i = 1; i &lt;= n; i++) {
-  // 	for (j = 1; j &lt;= n; j++)
-  // 		printf(&quot;%12.5e\t&quot;, a[i][j]);
-  // 	printf(&quot;| %12.5e\n&quot;, b[i]);
-  // }
+  % printf(&quot;           A               B\n&quot;);
+  % for (i = 1; i &lt;= n; i++) {
+  % 	for (j = 1; j &lt;= n; j++)
+  % 		printf(&quot;%12.5e\t&quot;, a[i][j]);
+  % 	printf(&quot;| %12.5e\n&quot;, b[i]);
+  % }
 
   gauss_seidel(a, b, x, n, iter, eps);
 
@@ -2240,7 +2554,7 @@ double trapezes_adapt(double a, double b, double eps, int n) {
   return intergral;
 }
 </code></pre>
-<pre><code class="language-matlab">// METHODE DES TRAPEZES (Forme adaptative)
+<pre><code class="language-matlab">% METHODE DES TRAPEZES (Forme adaptative)
 #include &lt;math.h&gt;
 #include &lt;stdio.h&gt;
 
@@ -2382,9 +2696,9 @@ void m_euler() {
   }
   for (i = 1; i &lt;= N; i++) {
     printf(&quot;x=%.6lf \t y=%.20e\n&quot;, P[i].x, P[i].y);
-    // fprintf(f1, &quot;%.6lf                  %.6lf\n&quot;, res[i][0], res[i][1]);
+    % fprintf(f1, &quot;%.6lf                  %.6lf\n&quot;, res[i][0], res[i][1]);
   }
-  // fclose(f1);
+  % fclose(f1);
 }
 int main() {
   m_euler();
@@ -2463,9 +2777,9 @@ void m_euler() {
   }
   for (i = 1; i &lt;= N; i++) {
     printf(&quot;x=%.6lf \t y=%.20e\n&quot;, P[i].x, P[i].y);
-    // fprintf(f1, &quot;%.6lf                  %.6lf\n&quot;, res[i][0], res[i][1]);
+    % fprintf(f1, &quot;%.6lf                  %.6lf\n&quot;, res[i][0], res[i][1]);
   }
-  // fclose(f1);
+  % fclose(f1);
 }
 int main() {
   m_euler();
@@ -2544,9 +2858,9 @@ void m_euler() {
   }
   for (i = 1; i &lt;= N; i++) {
     printf(&quot;x=%.6lf \t y=%.20e\n&quot;, P[i].x, P[i].y);
-    // fprintf(f1, &quot;%.6lf                  %.6lf\n&quot;, res[i][0], res[i][1]);
+    % fprintf(f1, &quot;%.6lf                  %.6lf\n&quot;, res[i][0], res[i][1]);
   }
-  // fclose(f1);
+  % fclose(f1);
 }
 int main() {
   m_euler();
@@ -2581,6 +2895,7 @@ int main() {
 
         <!-- Custom JS scripts -->
         <script type="text/javascript" src="./theme/tabbed-code-blocks.js"></script>
+        <script type="text/javascript" src="./theme/highlight.css"></script>
         <script type="text/javascript">
         window.addEventListener('load', function() {
             MathJax.Hub.Register.StartupHook('End', function() {

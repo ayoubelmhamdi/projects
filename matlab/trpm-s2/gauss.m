@@ -1,4 +1,4 @@
-// LA METHODE DE GAUSS
+% LA METHODE DE GAUSS
 #include <math.h>
 #include <stdio.h>
 #define NMAX 5
@@ -11,11 +11,11 @@ int main() {
   n = 4;
   printf("Méthode de Gauss:youssef\n");
   double a[NMAX][NMAX] = {
-      {0, 0, 0, 0, 0},      //
-      {0, 8, -4, 3, 7},     //
-      {0, 4, 2, -6, 4},     //
-      {0, -16, 6, -2, -15}, //
-      {0, 6, 10, -15, 10},  //
+      {0, 0, 0, 0, 0},      %
+      {0, 8, -4, 3, 7},     %
+      {0, 4, 2, -6, 4},     %
+      {0, -16, 6, -2, -15}, %
+      {0, 6, 10, -15, 10},  %
   };
   double b[NMAX] = {12, 1, -19, 1};
 

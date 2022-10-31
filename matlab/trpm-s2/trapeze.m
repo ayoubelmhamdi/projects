@@ -1,4 +1,4 @@
-// METHODE DES TRAPEZES (Forme adaptative)
+% METHODE DES TRAPEZES (Forme adaptative)
 #include <math.h>
 #include <stdio.h>
 

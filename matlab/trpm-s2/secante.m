@@ -1,4 +1,4 @@
-// METHODE DES TRAPEZES (Forme adaptative)
+% METHODE DES TRAPEZES (Forme adaptative)
 #include <math.h>
 #include <stdio.h>
 
@@ -13,11 +13,11 @@ int main() {
   x1 = 1;
   x0 = 0;
   eps = 0.00000000001;
-  // solution = qu_trapezes_adapt(a, b, eps, n);
-  // solution = trapezes_adapt1(a, b, eps, n);
-  // solution = trapezes_adapt2(a, b, eps, n);
+  % solution = qu_trapezes_adapt(a, b, eps, n);
+  % solution = trapezes_adapt1(a, b, eps, n);
+  % solution = trapezes_adapt2(a, b, eps, n);
   solution = secante(x0, x1, eps);
-  // solution = trapezes_adapt4(a, b, eps, n);
+  % solution = trapezes_adapt4(a, b, eps, n);
   printf("Méthode des trapèzes (formule adaptative)\n");
   printf("I = %.20lf", solution);
 

@@ -230,7 +230,36 @@ int main(int argc, char *argv[]) {
   return 0;
 }
 </code></pre>
-<pre><code class="language-matlab">{{#include ../matlab/trpm-1/TD2-ex-5.m}}
+<pre><code class="language-matlab">
+function i =  convert(N,bin,nb)
+  i = 0;
+  for (i = 0; nb &gt; 0; i++) {
+    bin(i) = mod(nb, 2);
+    nb = nb / 2;
+  end
+end
+
+function affichage(tab, nb,int N)
+  printf(&quot;\naffichage de tab()\n&quot;);
+  for i=0:N-1
+    printf(&quot;%d&quot;, tab(i));
+  end
+end
+
+function inverse(tab, N)
+  for (int i = 0; i &lt; N / 2; i++)
+    int aide = tab[i];
+    tab[i] = tab[N - i - 1];
+    tab[N - i - 1] = aide;
+  end
+end
+
+int i; N = 6; x = 13;
+
+N,tab = convert(N, tab, x);
+inverse(tab, N);
+affichage(tab, x, N);
+
 </code></pre>
 </div>
 
@@ -272,5 +301,6 @@ int main(int argc, char *argv[]) {
 
         <!-- Custom JS scripts -->
         <script type="text/javascript" src=".././theme/tabbed-code-blocks.js"></script>
+        <script type="text/javascript" src=".././theme/highlight.css"></script>
     </body>
 </html>

@@ -228,7 +228,56 @@ int main(int argc, char *argv[]) {
   return 0;
 }
 </code></pre>
-<pre><code class="language-matlab">{{#include ../matlab/trpm-1/TD2-ex-4.m}}
+<pre><code class="language-matlab">
+function tab = tri_tableu(tab, n)
+  for i = 1:n
+    for j = i:n
+      if tab(i) &gt; tab(j)
+        aide = tab(i);
+        tab(i) = tab(j);
+        tab(j) = aide;
+      end
+    end
+  end
+endfunction
+
+tab1 = [8, 6, 4, 2, 12, 10];
+tab2 = [5, 15, 10];
+n1 = 6;
+n2 = 3;
+n3 = n1 + n2;
+tab1 = tri_tableu(tab1, n1);
+tab2 = tri_tableu(tab2, n2);
+% disp(tab1)
+% disp(tab2)
+
+for i = 1:n3
+  if (i &lt;= n1)
+    tab3(i) = tab1(i);
+  else
+    tab3(i) = tab2(i - n1);
+  end
+end
+
+
+printf(&quot;\naffichage de tab1()\n&quot;);
+% for i = 1:n1
+%   printf(&quot;%d\t&quot;, tab1(i));
+% end
+disp(tab1)
+
+printf(&quot;\naffichage de tab2()\n&quot;);
+% for i = 1:n2
+%   printf(&quot;%d\t&quot;, tab2(i));
+% end
+disp(tab2)
+
+printf(&quot;\naffichage de tab3()\n&quot;);
+% for i = 1:n3
+%   printf(&quot;%d\t&quot;, tab3(i));
+% end
+disp(tab3)
+
 </code></pre>
 </div>
 
@@ -270,5 +319,6 @@ int main(int argc, char *argv[]) {
 
         <!-- Custom JS scripts -->
         <script type="text/javascript" src=".././theme/tabbed-code-blocks.js"></script>
+        <script type="text/javascript" src=".././theme/highlight.css"></script>
     </body>
 </html>

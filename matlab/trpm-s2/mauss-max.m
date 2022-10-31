@@ -1,4 +1,4 @@
-// LA METHODE DE GAUSS PIVOT MAXIMUM
+% LA METHODE DE GAUSS PIVOT MAXIMUM
 #include <math.h>
 #include <stdio.h>
 #define NMAX 5
