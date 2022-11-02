@@ -1,4 +1,3 @@
-
 function tab = tri_tableu(tab, n)
   for i = 1:n
     for j = i:n

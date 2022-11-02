@@ -253,11 +253,6 @@ int sl_gauss_pivmax(double a[NMAX][NMAX], double b[NMAX], int n) {
   }
 </code></pre>
 <pre><code class="language-matlab">% LA METHODE DE GAUSS PIVOT MAXIMUM
-#include &lt;math.h&gt;
-#include &lt;stdio.h&gt;
-#define NMAX 5
-#define N2MAX 6
-int sl_gauss_pivmax(double a[NMAX][NMAX], double b[NMAX], int n);
 int main() {
   double a[NMAX][NMAX], b[NMAX];
   int i, j, n, err;
@@ -283,17 +278,15 @@ int main() {
     printf(&quot;Erreur, matrice singulière\n&quot;);
   return 0;
 }
-/*
-Méthode de Gauss avec recherche du pivot maximum (fonction sl_gauss_pivmax).
-Les paramètres d'appel de cette fonction sont :
-a : un tableau carré (la matrice du système) ;
-b : un tableau unidimensionnel (le second membre du système) ;
-n : l'ordre de la matrice.
-Elle renvoie la valeur 1 si la matrice est numériquement inversible et la valeur
-0 sinon ; quand la valeur renvoyée est 1, la solution du système se trouve dans
-le tableau b. La constante entière NMAX est égale à la dimension maximale de la
-matrice (+1) ; la constante entière N2MAX est égale à NMAX+1.
-*/
+%Méthode de Gauss avec recherche du pivot maximum (fonction sl_gauss_pivmax).
+%Les paramètres d'appel de cette fonction sont :
+%a : un tableau carré (la matrice du système) ;
+%b : un tableau unidimensionnel (le second membre du système) ;
+%n : l'ordre de la matrice.
+%Elle renvoie la valeur 1 si la matrice est numériquement inversible et la valeur
+%0 sinon ; quand la valeur renvoyée est 1, la solution du système se trouve dans
+%le tableau b. La constante entière NMAX est égale à la dimension maximale de la
+%matrice (+1) ; la constante entière N2MAX est égale à NMAX+1.
 int sl_gauss_pivmax(double a[NMAX][NMAX], double b[NMAX], int n) {
   int i, j, k, l, err;
   double max, pivot, coef, s;

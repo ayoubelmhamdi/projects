@@ -242,69 +242,55 @@ int main(int argc, char *argv[]) {
   return 0;
 }
 </code></pre>
-<pre><code class="language-matlab">#include &lt;stdio.h&gt;
-
-int lire_dim(int n) { return n; }
-
-int convert(int N, int *bin, int nb) {
-  int i = 0;
-  for (i = 0; nb &gt; 0; i++) {
-    bin[i] = nb % 2;
+<pre><code class="language-matlab">function i = convert(N, bin, nb)
+  i = 0;
+  for nb=-1:0  %for (i = 0; nb &gt; 0; i++) 
+    bin(i) = mod(nb,2);
     nb = nb / 2;
-  }
-  return i;
-}
+  end
+endfunction
 
-void lire_matrice(int l, int *mat) {
-  for (int i = 0; i &lt; l; i++) {
-    for (int j = 0; j &lt; l; j++) {
-      printf(&quot;mat[%d][%d]=&quot;, i, j);
-      scanf(&quot;%d%d&quot;, mat + i, mat + j);
-    }
-  }
-}
+function lire_matrice(l, mat)
+  for i = 0:l-1
+    for j = 0:l-1
+      mat(i)(j)=input(&quot;mat[%d][%d]=&quot;, i, j);
+    end
+  end
+endfunction
 
-void affichage(int l, int tab[l][l]) {
+function  affichage(l, tab) 
   printf(&quot;\naffichage de tab[]\n&quot;);
-  for (int i = 0; i &lt; l; i++) {
-    for (int j = 0; j &lt; l; j++) {
-      /* if you want to use pointer use */
-      /* func(...,`int** tab`,...) */
-      /* if you don't want to use pointer*/
-      /* must used args like that func(....,int a,int b,int tab[a][b],...), */
-      /* printf(&quot;%d&quot;, tab[i][j]); */
-      printf(&quot;%d\t&quot;, tab[i][j]);
-    }
+  for i = 0:l-1
+    for j = 0:l-1
+      printf(&quot;%d\t&quot;, tab(i)(j));
+    end
     printf(&quot;\n\n&quot;);
-  }
-}
+  end
+endfunction
 
-void multi_2_matrices(int n, int mat1[n][n], int mat2[n][n], int mat3[n][n]) {
-  for (int i = 0; i &lt; n; i++) {
-    for (int j = 0; j &lt; n; j++) {
-      int sum = 0;
-      for (int k = 0; k &lt; n; k++) {
-        sum = sum + mat1[i][k] * mat2[k][j];
-      }
-      mat3[i][j] = sum;
-    }
-  }
-}
+function multi_2_matrices(n, mat1, mat2, mat3) 
+  for i = 0:n-1
+    for j = 0:n-1
+      sum = 0;
+      for k = 0:n-1
+        sum = sum + mat1(i)(k) * mat2(k)(j);
+      end
+      mat3(i)(j) = sum;
+    end
+  end
+endfunction
 
-int main(int argc, char *argv[]) {
-  int l = 2;
-  /* int mat1[l][l]; */
-  /* int mat2[l][l]; */
-  int mat1[2][2] = {{1, 0}, {0, 2}};
-  int mat2[2][2] = {{3, 0}, {0, 4}};
-  int mat3[2][2];
+l = 2;
+mat1(l)(l);
+mat2(l)(l);
+mat1(2)(2) = [1, 0, 0, 2];
+mat2(2)(2) = [3, 0; 0, 4];
+mat3(2)(2);
 
-  multi_2_matrices(l, mat1, mat2, mat3);
-  affichage(2, mat1);
-  affichage(2, mat2);
-  affichage(2, mat3);
-  return 0;
-}
+multi_2_matrices(l, mat1, mat2, mat3);
+affichage(2, mat1);
+affichage(2, mat2);
+affichage(2, mat3);
 </code></pre>
 </div>
 

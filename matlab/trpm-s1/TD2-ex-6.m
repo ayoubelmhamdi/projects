@@ -1,63 +1,49 @@
-#include <stdio.h>
-
-int lire_dim(int n) { return n; }
-
-int convert(int N, int *bin, int nb) {
-  int i = 0;
-  for (i = 0; nb > 0; i++) {
-    bin[i] = nb % 2;
+function i = convert(N, bin, nb)
+  i = 0;
+  for nb=-1:0  %for (i = 0; nb > 0; i++) 
+    bin(i) = mod(nb,2);
     nb = nb / 2;
-  }
-  return i;
-}
+  end
+endfunction
 
-void lire_matrice(int l, int *mat) {
-  for (int i = 0; i < l; i++) {
-    for (int j = 0; j < l; j++) {
-      printf("mat[%d][%d]=", i, j);
-      scanf("%d%d", mat + i, mat + j);
-    }
-  }
-}
+function lire_matrice(l, mat)
+  for i = 0:l-1
+    for j = 0:l-1
+      mat(i)(j)=input("mat[%d][%d]=", i, j);
+    end
+  end
+endfunction
 
-void affichage(int l, int tab[l][l]) {
+function  affichage(l, tab) 
   printf("\naffichage de tab[]\n");
-  for (int i = 0; i < l; i++) {
-    for (int j = 0; j < l; j++) {
-      /* if you want to use pointer use */
-      /* func(...,`int** tab`,...) */
-      /* if you don't want to use pointer*/
-      /* must used args like that func(....,int a,int b,int tab[a][b],...), */
-      /* printf("%d", tab[i][j]); */
-      printf("%d\t", tab[i][j]);
-    }
+  for i = 0:l-1
+    for j = 0:l-1
+      printf("%d\t", tab(i)(j));
+    end
     printf("\n\n");
-  }
-}
+  end
+endfunction
 
-void multi_2_matrices(int n, int mat1[n][n], int mat2[n][n], int mat3[n][n]) {
-  for (int i = 0; i < n; i++) {
-    for (int j = 0; j < n; j++) {
-      int sum = 0;
-      for (int k = 0; k < n; k++) {
-        sum = sum + mat1[i][k] * mat2[k][j];
-      }
-      mat3[i][j] = sum;
-    }
-  }
-}
+function multi_2_matrices(n, mat1, mat2, mat3) 
+  for i = 0:n-1
+    for j = 0:n-1
+      sum = 0;
+      for k = 0:n-1
+        sum = sum + mat1(i)(k) * mat2(k)(j);
+      end
+      mat3(i)(j) = sum;
+    end
+  end
+endfunction
 
-int main(int argc, char *argv[]) {
-  int l = 2;
-  /* int mat1[l][l]; */
-  /* int mat2[l][l]; */
-  int mat1[2][2] = {{1, 0}, {0, 2}};
-  int mat2[2][2] = {{3, 0}, {0, 4}};
-  int mat3[2][2];
+l = 2;
+mat1(l)(l);
+mat2(l)(l);
+mat1(2)(2) = [1, 0, 0, 2];
+mat2(2)(2) = [3, 0; 0, 4];
+mat3(2)(2);
 
-  multi_2_matrices(l, mat1, mat2, mat3);
-  affichage(2, mat1);
-  affichage(2, mat2);
-  affichage(2, mat3);
-  return 0;
-}
+multi_2_matrices(l, mat1, mat2, mat3);
+affichage(2, mat1);
+affichage(2, mat2);
+affichage(2, mat3);
